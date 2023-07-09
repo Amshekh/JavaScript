@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Rest in ECMAScript ES6 </title>
+	<script type="text/javascript">
+		
+//-------------- Normal Scenario where we can perform multiply, add, substract etc on limited variables -----------
+		
+//		const mul = (a, b, c) => {
+//			return a*b*c;
+//		}
+//		document.write(mul(1, 3, 5));
+
+//---------- Now we will use Rest operator for as many numbers we want to perform multiply, add, substract etc-----
+
+		const mul = (...numbers) => {  // ...numbers can take infinite number of arguments
+
+			let result = 1;//Initializing result to 1,because if we initialize it to 0, result would always be zero
+			numbers.forEach((n) => { // We are using forEach so we can perform multiply on any number of variables
+									result *= n;
+			});
+				document.write(result);
+		}
+	 //mul(1, 2);   // Passing just 2 values
+
+	// mul(1, 2, 3);  // Passing 3 values
+	
+	mul(1, 2, 3, 4, 5, 6);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

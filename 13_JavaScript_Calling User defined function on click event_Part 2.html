@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> JavaScript_Calling User defined function on click event </title>
+</head>
+<body>
+		<input type="text" name="" id="username"/>  <!-- Here we will take input in form of text -->
+		<button onclick="Greet()">
+			Greet
+		</button>
+		<div class="Greet"></div>
+</body>
+	<script type="text/javascript">
+		function Greet() {															  // Greet Function declaration with no parameters
+						  var username = document.getElementById("username").value;  // here .value will get value from input of user
+						  var x = "Hello " + username;
+						  document.getElementsByClassName("Greet")[0].innerHTML = x; // if there are multiple classes with same name Greet
+		}																			 // 0th keeper gets called and output is displayed	
+	</script>
+</html>

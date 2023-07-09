@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> JavaScript Printing a page or specific element data </title>
+</head>
+<body id="body">
+	<center>
+		<div>
+			<img src="Logo_ATC.jpg" width ="300px" height="300px" />
+			<h1> Printable Data </h1>
+		</div>
+			<p id="data">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			</p>
+		<button onclick="printPage()" style="width: 100px; background: aqua;"> Print </button>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+	</center>		
+</body>
+	<script type="text/javascript">
+	//		function printPage() {
+	//			window.print();  // It will print the whole content in browser, which we don't want.
+	//		}
+
+
+	//  Now to avoid window.print() print whole page, we will use trick to print desired portion.
+
+		function printPage() {
+			var body = document.getElementById('body').innerHTML;
+			var data = document.getElementById('data').innerHTML;
+			document.getElementById('body').innerHTML = data; // We swap content of body with content of data which we want only to print 
+			window.print(); // Now window.print() is tricked to print only content of paragraph with id data
+
+	// After printable data is printed, we now want user to see all data on webpage, just like it was before user pressed print button
+
+			document.getElementById('body').innerHTML = body;
+		}
+	</script>
+</html>

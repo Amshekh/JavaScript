@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> JavaScript setTimeout </title>
+</head>
+<body>
+	<button onclick="test()" style="width: 100px; background: aqua; margin: 100px 0px 0px 250px;"> Press Now </button>
+
+</body>
+	<script type="text/javascript">
+		function test() {
+			setTimeout( 
+				function() {
+				//	alert("Hello");  // After 2.5 seconds alert box will appear
+				document.write("Welcome to Amit's Tech Center"); // After 2.5 seconds this will be printed as output
+				},
+			      2500
+			  );	
+		} 
+	</script>
+</html>

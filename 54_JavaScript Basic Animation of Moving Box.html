@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Basic Animation of Moving Box </title>
+	<style type="text/css">
+		.boxLarge {
+					width: 500px;
+					height: 500px;
+					background: aqua;
+					position: relative;
+					margin-top: 35px;
+		}
+		#boxSmall {
+					width: 50px;
+					height: 50px;
+					background: gold;
+					position: absolute;
+					top: 0px;
+					left: 0px;
+		}
+	</style>
+</head>
+<body> <!-- We are doing animation using JavaScript because here animation starts on clicking button, not like CSS3 where on page load -->
+	<button onclick="moveSmallBox()" style="width: 120px; background: lime; margin: 10px;"> Press me </button>
+	<div class="boxLarge">
+		<div id="boxSmall"></div>
+   </div>
+</body>
+	<script type="text/javascript">
+		function moveSmallBox() {
+			var s = document.getElementById('boxSmall');
+			var pos = 0;  // position of small Box to be 0
+
+			var anim = setInterval(animate, 3);// In setInterval we will pass function animate declared below and time interval 3 millisec.
+			function animate() {
+				  if (pos == 450) {       //50px is width of small box, so 500 - 50 = 450.At 450px small box will reach end of large box
+				  	clearInterval(animate); // Now we want animation effect to stop, so clear interval
+				  }
+				  else {
+				   		pos++; // position of small box must constantly increase from top and left till it reaches end of large box.
+						s.style.top = pos + "px";
+						s.style.left = pos + "px"; // for small box to move diagonally, it should move from top + left at the same time
+				   }
+				   
+				}	
+		}
+	</script>
+</html>

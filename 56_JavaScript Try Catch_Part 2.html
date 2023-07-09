@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Try Catch another example</title>
+</head>
+<body>
+	<button onclick="test()" style="width: 100px; background: aqua; margin: 100px 0px 0px 350px;"> Press Me </button>
+	<h1 id="result" style="color: red; margin: 100px 0px 0px 325px;"></h1>
+</body>
+	<script type="text/javascript">
+		function test() {
+					
+					try {
+				//		var num = 5;
+				//		var x = num.toUpperCase();  // since number can't be upper case, it will go to catch section and error will be print
+				//		alert(x);  // alert will not be executed because number can't be uppercase and has been passed to catch
+
+				//  Another case where we will pass engish word in try section as input
+
+					 var num = "superman"; // num is just a variable name, what matters is what we assign to it ==> a number or english word
+					 var x = num.toUpperCase(); // a english word can be obviously upper case, so no error and it will run properly
+					 document.getElementById('result').innerText = x;
+					}
+
+					catch(err) {
+						document.getElementById('result').innerText = err;
+					}
+				}		
+	</script>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Simple Calculator using JavaScript </title>
+	<style type="text/css">
+		.main {
+				width: 700px;
+				height: 500px;
+				margin: auto;
+				background: linear-gradient(90deg, #0061FF 0%, #60EFFF 100%);
+				font-weight: bold;
+				text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<h1 style="margin: 50px auto; color: gold; font-weight: bold;"> CALCULATOR </h1>
+		<input type="number" name="first" id="first" step="any" style="width: 140px; margin-top: 120px" />
+		<select id="operation">
+			<option value="+"> + </option>
+			<option value="-"> - </option>
+			<option value="*"> * </option>
+			<option value="/"> / </option>
+			<option value="%"> % [Remainder] </option>  <!-- Modulus operation to find remainder -->
+		</select>
+		<input type="number" name="second" id="second" step="any" style="width: 140px; margin-top: 120px;" />
+		</br>
+		</br>
+		<button onclick="cal()" style="width: 170px; background: gold; margin-top: 200px;"> Calculate </button>
+		<input type="text" name="" id="result" readonly=""/>
+	</div>	
+</body>
+	<script type="text/javascript">
+		function cal(){
+							var operand1 = document.getElementById("first").value;
+							var operand2 = document.getElementById("second").value;
+							var operation = document.getElementById("operation").value;
+							
+							if (operation == "+") {
+							var result = parseInt(operand1) + parseInt(operand2); // parseInt() will convert string to integer
+							}
+							
+							if (operation == "-") {
+							var result = parseInt(operand1) - parseInt(operand2);	
+							}
+							
+							if (operation == "*") {
+							var result = parseInt(operand1) * parseInt(operand2);
+							}
+							
+							if (operation == "/") {
+							var result = parseInt(operand1) / parseInt(operand2);
+							}
+							
+							if (operation == "%") {
+							var result = parseInt(operand1) % parseInt(operand2);
+							}
+							document.getElementById("result").value = result;
+		}
+		
+	</script>
+</html>

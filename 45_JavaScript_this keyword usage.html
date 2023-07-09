@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> JavaScript this keyword</title>
+	<script type="text/javascript">
+	
+//  When this is all alone, this refers to global object
+
+//		var x = this;
+//		document.write("<h1>"+ x);
+
+
+// When this is used in a function, again global object
+
+		var user = {
+					firstName : "Amit",
+					secondName : "Shekhar",
+					fullName : function() {
+						return this.firstName +" " + this.secondName;
+					}
+    	};
+    	document.write("<h1>"+ user.fullName());
+
+
+	</script>
+</head>
+<body>   <!-- on clicking button the object is created  -->
+	<button onclick="this.style.display = 'none';" style="width: 150px; background: aqua; margin: 150px 0px 0px 350px";> Click to hide button </button>
+
+	<button onclick="this.style.background = 'brown';" style="width: 150px; background: aqua; margin: 150px 0px 0px 350px;"> Color change  </button>
+</body>
+</html>

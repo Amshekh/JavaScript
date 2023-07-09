@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Class in ECMAScript ES6 </title>
+	<script type="text/javascript">
+		class Person {  // Defining a class named Person using class keyword
+			constructor(uName, uGender, uEmail, uContact) {  // Only One constructor is possible for a class
+				this.name = uName; 
+				this.gender = uGender;
+				this.email = uEmail;
+				this.contact = uContact;
+			}
+			details() { // we will fetch values from constructor defined objects and use it here.
+				document.write(`<h1>The details of  ${this.name}  ${this.gender} are email: ${this.email} ,mobile no. ${this.contact}</h1>`);
+			}
+		}
+		const p = new Person("Amit Shekhar", "Male", "amitshekhar@amshekhlabs.com", 9999888007);
+		p.details(); // It will send our all above entered values for new Person to details() which will take these
+	</script>		 <!--	values and write in document.write as our required output  -->
+</head>
+<body>
+
+</body>
+</html>

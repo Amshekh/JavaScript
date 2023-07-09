@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> JavaScript Switch Statement</title>
+</head>
+<body>
+
+</body>
+	<script type="text/javascript">
+		var daynumber = prompt("Enter the any day number from the week [1 - 7]"); // User input will be treated as string
+		var i = parseInt(daynumber); // So we have to convert it to number using parseInt() function
+			
+switch (i) {
+case 1:
+	document.write("Your day of the week is Sunday");
+	break;
+
+case 2: 
+	document.write("Your day of the week is Monday");
+	break;
+
+case 3:
+	document.write("Your day of the week is Tuesday");
+	break;
+
+case 4:
+	document.write("Your day of the week is Wednesday");
+	break;
+
+case 5:
+	document.write("Your day of the week is Thursday");
+	break;
+
+case 6:
+	document.write("Your day of the week is Friday");
+
+case 7:
+	document.write("Your day of the week is Saturday");
+
+default:
+	document.write("Please enter a day number between 1 - 7");
+}
+
+document.write("</br> Please enter value as per instruction");
+	</script>
+</html>

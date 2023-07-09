@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> JavaScript_Using JavaScript DOM to open and close Window </title>
+</head>
+	<script type="text/javascript">
+		var win; // win is now a global variable, which can be used by any function as per requirement
+
+		function openWin() {
+			win = window.open("https://www.ftx.com");  // a new tab will open in your browser and it will take to mentioned website
+
+		// Alternatively if you want a smaller window to open instead of tab in your browser
+		//	win = window.open("https://www.ftx.com", "width=500px", "height=500px"); // now a window of 500 x 500 will open
+		}
+
+		function closeWin() {
+			win.close();  // now since win is a global variable, when we write win.close() it will close the already opened tab of browser
+		}
+	</script>
+<body>
+	<button onclick="openWin()" style="width: 200px; background: aqua; margin: 150px 0px 0px 250px"> Press to open FTX website </button>
+	<button onclick="closeWin()" style="width: 100px; background: gold; margin: 150px 0px 0px 250px"> Close </button>
+</body>
+	
+</html>

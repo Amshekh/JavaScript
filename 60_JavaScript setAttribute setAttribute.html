@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> getAttribute and setattribute </title>
+	<style type="text/css">
+		.brown {
+			color: brown;
+			font-size: 55px;
+		}
+		.aqua {
+			color: aqua;
+			font-size: 55px;
+		}
+	</style>
+</head>
+<body>
+	<div id="test" class="brown"> Hey Everybody! </div>
+	<button onclick="testing()" style="width: 150px; background: lime; margin: 25px 0px 0px 150px;"> Press </button>
+	<h1 id="result"></h1>
+</body>
+	<script type="text/javascript">
+		var test = document.getElementById('test');  // It's better to declare test as a global variable
+		function testing() {
+			var cls = test.getAttribute("class");
+	//		document.getElementById('result').innerText = cls;
+			if (cls == "brown") {
+				test.setAttribute("class", "aqua"); // setAttribut requires two values the attribute and to what we change it to
+													// class is the attribute and we want it to change it to aqua	
+			}
+			else {
+				test.setAttribute("class", "brown");
+			}
+		}
+	</script>
+</html>

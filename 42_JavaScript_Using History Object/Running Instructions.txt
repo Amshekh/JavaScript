@@ -1,0 +1,9 @@
+ 
+
+  *  first run 1.html in your web browser
+
+  *  you may now click on url and put 2.html and enter
+
+  *  now open 3.html using same 
+
+  *  click on back and forward to check functionality

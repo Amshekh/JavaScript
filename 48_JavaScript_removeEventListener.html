@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> JavaScript removeEventListner </title>
+</head>
+<body>
+	<div id="counter" style="margin: 50px 0px 0px 400px; font-size: 50px; font-weight: bold;"></div>
+	<button id="xyz" style="width: 150px; background: aqua; margin: 200px 0px 0px 350px;"> Press Now </button>
+	<button id="stop" onclick="Stop()" style="width: 150px; background: gold; margin: 200px 0px 0px 350px;"> Stop </button>
+</body>
+	<script type="text/javascript">
+		var i = 1;
+//		document.getElementById('xyz').addEventListener("click", function(){   // Method 1: In this we declare function in this only
+//		                                                               document.getElementById('counter').innerText = i;	
+//																			i++; // Now counter value will keep increasing on button click
+//																		}
+//
+//														)
+//
+		document.getElementById('xyz').addEventListener("click", counter);
+
+		function counter() {
+			document.getElementById('counter').innerText = i;
+			i++;
+		}
+
+		// Method 2 in which we will declare function seperately to do addEventListener
+
+		document.getElementById('xyz').addEventListener("mouseenter", colorBrown); // when mouse enter counter color changes
+
+		function colorBrown() {
+			document.getElementById('counter').style.color = "brown"; // this will change color of counter
+		}
+
+//  Now for situation when mouse leaves, color to change back to black
+
+		document.getElementById('xyz').addEventListener("mouseleave", colorBlack);
+
+		function colorBlack() {
+			document.getElementById('counter').style.color = "black";
+		}
+
+
+		function Stop() { // We will apply removeEventListener on xyz, id of our button | second argument of removeEventListener needs a 																				function to be passed, so we will declare function 
+			document.getElementById('xyz').removeEventListener("click", counter);
+		}	 // after clicking on stop button, now if you click on press now button ==> counter will not work as it is now removed
+	</script>
+</html>

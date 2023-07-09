@@ -1,0 +1,39 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title> Modify CSS using javascript </title>
+		<style type="text/css">
+			#main {
+					font-size: 50px;
+					color: aqua;
+					text-align: center;   
+					margin-top: 50px;  
+					cursor: pointer;  /* As soon as mouse cursor is pointed on text, it will show pointer/ finger */
+					transition: 2s; /* we want effect for duration of 2 seconds */
+
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main" onmouseenter="modify()" onmouseleave="unmodify()"> 
+				Amit's Tech Center            <!-- If you want effects on mouse click? Replace onmouseenter to onclick -->                                               
+		</div>
+	</body>
+		<script type="text/javascript">
+			function modify() {
+				document.getElementById('main').style.fontSize = "100px"; // whenever mouse cursor goes to text font size increases to 100px
+																		  // Note : here we write fontSize in camel case (JavaScript)
+
+				document.getElementById('main').style.color = "Gold"; // on mouse hover text color will change to gold for 2 seconds
+				document.getElementById('main').style.fontFamily = "Arial";
+			}	
+			function unmodify() {
+				document.getElementById('main').style.fontSize = "50px"; // whenever mouse cursor goes away from text font size reduces to 50px
+
+				document.getElementById('main').style.color = "aqua"; // It will change color of text back to aqua when we take maouse away
+				document.getElementById('main').style.fontFamily = ""; // It will change font back to what it was originally
+			}
+		</script>
+	</html>

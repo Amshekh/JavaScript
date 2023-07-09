@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title> JavaScript Array Methods </title>
+</head>
+<body></body>
+	<script type="text/javascript">
+		var laptops = ["Apple", "Dell", "Microsoft Surface", "Asus", "Lenovo"];
+	//  (i) isArray()  method
+		
+	//	alert(Array.isArray(laptops));  // output will be True as on checking fruits turns out to be an array ==> isArray() method
+
+	// Alternatively
+	//	var flag = Array.isArray(laptops);  // flag will be assigned value of Array.isArray(laptops) which is True
+	//	document.write("<h1>"+flag+"</h1>");  // True will be output as variable flag has now value as True got from Array.isArray(laptops)
+
+	
+	//  (ii) ValueOf()  method
+
+	//	var flag = laptops.valueOf();  // flag will be assigned all the values of array named laptops
+	//	document.write("<h1>"+flag+"</h1>"); // output will be Apple, Dell, Microsoft Surface, Asus, Lenovo
+
+
+	// (iii) join()  method  ||  We use it for proper format purpose, like we don't want laptops elements to be print as comma separated
+
+	//	var flag = laptops.join("|"); // Alternatively you may pass !, $, /.....etc whatever you like instead of commas
+	//	document.write("<h1>"+flag+"</h1>"); // here output will be separated by | instead of commas, which didn't look good
+
+
+	
+	// (iv)	concat()   method || Here we will declare another array to concat with already declared laptops array and result in another array
+
+		var mobiles = ["Iphone", "Samsung Galaxy", "Oneplus", "Oppo", "Xiaomi"];
+		var shop = laptops.concat(mobiles);
+		var flag = shop.join("|");
+		document.write("<h1>"+flag+"</h1");
+
+
+	// (v) indexOf()   method || We get index of desired array element
+
+//	var mobiles = ["Iphone", "Samsung Galaxy", "Oneplus", "Oppo", "Xiaomi"];
+//	var shop = laptops.concat(mobiles);  // You can also assign shop = mobiles.concat(laptops); Now index of array elements will change
+//	var index = shop.indexOf("Samsung Galaxy"); // index of Samsung Galaxy is 5 elements in laptops + 2nd position = 7 but array starts at 0
+//	document.write("<h1>"+index+"</h1");    //  Here we will get index of Samsung Galaxy in shop array i.e. 6  as 0,1,2,3,4,5,6,7--> Samsung
+
+	</script>
+</html>

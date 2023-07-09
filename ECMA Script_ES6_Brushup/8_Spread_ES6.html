@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Spread in ECMAScript 6 </title>
+	<script type="text/javascript">
+	//	const oldArray = [1, 2, 3, 4, 5];
+	//	const newArray = [...oldArray, 6, 7, 8, 9, 10]; // we are using ... operator to spread previously declared array.In ES6 we need to use ...name of array, new values seperated by commas  to fill new values
+
+		// -------------------------------------  Additionally---------------------------------------------------
+
+	//	const newArray = ["A", "B", "C", "D",...oldArray, 6, 7, 8, 9, 10];
+
+//		console.log(newArray);
+//      document.write(newArray);
+	//	document.write(`<h1> ${newArray} </h1>`);
+
+//----------------- Now we will use 2 arrays and combine using Rest operator to a third array -------------------
+
+		const laptops = ["Macbook", "Microsoft Surface", "Dell", "Asus"];
+		const mobiles = ["Iphone", "Samsung Galaxy", "Asus", "Oppo", "Oneplus", "Xiaomi"];
+		const gadgets = [...laptops, ...mobiles];
+
+		document.write(`<h1> ${gadgets} </h1>`);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

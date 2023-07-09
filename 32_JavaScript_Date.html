@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> JavaScript Date</title>
+</head>
+<body>
+	<h1 id="result"></h1>
+	<button onclick="getDate()" style="width: 65px; background: aqua; margin-left: 35px;"> Get Date </button>
+	<button onclick="year()" style="width: 65px; background: gold; margin-left: 75px;"> Year </button>
+	<button onclick="month()" style="width: 65px; background: limegreen; margin-left: 75px;"> Month </button>
+	<button onclick="hours()" style="width: 65px; background:orangered; margin-left: 75px;"> Hours </button>
+	<button onclick="currentdate()" style="width: 65px; background: skyblue; margin-left: 75px;"> Date </button>
+	<button onclick="min()" style="width: 65px; background: purple; margin-left: 75px;"> Min </button>
+	<button onclick="day()" style="width: 65px; background: violet; margin-left: 75px;"> Day </button>
+	<button onclick="time()" style="width: 65px; background: orange; margin-left: 75px;"> Time </button>
+	<button onclick="sec()" style="width: 65px; background: grey; margin-left: 75px;"> Seconds </button>
+</body>
+	<script type="text/javascript">
+		var date = new Date();
+		function getDate() {
+			document.getElementById('result').innerText = date;
+		}
+
+		function year() {
+			document.getElementById('result').innerText = date.getFullYear();
+		}
+
+		function month() {
+	var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+	document.getElementById('result').innerText = month[date.getMonth()];
+		}
+
+		function hours() {
+			document.getElementById('result').innerText = date.getHours();
+		}
+
+		function currentdate() {
+			document.getElementById('result').innerText = date.getDate();
+		}
+
+		function min() {
+			document.getElementById('result').innerText = date.getMinutes();
+		}
+
+
+		function day() {
+			document.getElementById('result').innerText = date.getDay();  //In JavaScript Day starts from 0 to 6
+		}
+
+		function time() {
+			document.getElementById('result').innerText = date.getTime(); // Time in milliseconds since January 1, 1970.
+
+		}
+
+		function sec() {
+			document.getElementById('result').innerText = date.getSeconds();
+		}
+	</script>
+</html>

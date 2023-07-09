@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> JavaScript DOM Functions | document.getElementById </title>
+</head>
+<body>
+	<div id="main">
+		Welcome to Amit's Tech Center
+	</div>
+</body>
+	<script type="text/javascript">
+	//	var x =	document.getElementById("main"); // document.getElementById() ==> on basis of id it's bringing all elements
+	// var x = document.getElementById("main").innerHTML; // when innerHTML is used, it brings all content inside div and not along with div
+	//	console.log(x);   // to check click Shift+I and then in console section, output is shown
+
+	document.getElementById("main").innerHTML = "<h1> Welcome to ATC </h1>";//old content inside div will be overridden & this get's written
+	</script>
+</html>

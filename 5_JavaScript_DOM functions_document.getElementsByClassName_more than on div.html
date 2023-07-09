@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> JavaScript DOM Functions </title>
+</head>
+<body>
+	<div class="main">	<!--  This div is 0th key -->
+			Welcome to Amit's Tech Center
+	</div>
+	<div class="main">	<!-- This div is 1th key  -->
+			Welcome to ATC
+	</div>
+</body>
+	<script type="text/javascript">
+		var x = document.getElementsByClassName("main")[0].innerHTML; // Here we target 0th key, so give [0] as there are 2 classes as main
+		alert(x);
+	</script>
+</html>

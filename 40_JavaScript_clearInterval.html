@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> JavaScript clearInterval </title>
+</head>
+	<script type="text/javascript">
+		var x = setInterval(count ,1000); // count function will be called every 1000 milliseconds i.e. 1 seconds
+		c = 0;
+		function count() {
+			document.getElementById('i1').innerText = c;
+			c++;
+		}
+		function stop() {
+			clearInterval(x);
+			alert('Interval cleared');
+		}
+	</script>
+<body>
+	<h1 id="i1"></h1>
+	<button onclick="stop()" style="width: 100px; background: aqua; margin: 50px 0px 0px 50px"> Stop </button>
+</body>
+</html>

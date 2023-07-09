@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Try Catch Finally </title>
+</head>
+<body>
+	Please enter a number between 1 and 99
+	<input type="" name="" id="num"/>
+	<button onclick="test()" style="width: 150px; background: aqua;"> Press </button>
+	<h1 id="result"></h1>
+</body>
+	<script type="text/javascript">
+		var num = document.getElementById('num'); // we create global object targeting id num
+		function test() {
+			var data = num.value; // variable data will fetch input value of user through num.value
+			 try{
+			 	 if (isNaN(data)) { // is Not a Number,if condition true we throw a string stating error
+			 	 	throw "Please enter a number";
+			 	 }
+			 	 else {
+			 	//  if (data < 1 && data > 99) {//a no can't be smaller than 1 and greater than 99 at the same time, an example of logical error which try and catch can't deal with, so throw
+
+			 	 	if (data < 1 || data > 99) {  // We want user to input data from 1 to 99
+			 	 		throw "Please enter a number in given range";
+			 	 	}
+			 	 	else {
+			 	 			throw "";  // as user has entered correct number between 1 and 99
+			 	 	}
+			 	 }
+			 }
+			 catch(errMessage){
+			 		document.getElementById('result').innerText = errMessage; // error will be displayed in bold h1 heading as output
+			 }
+			 finally {
+			 			num.value = "";//this will clear the input box after we enter values and execution, which was not happening before
+			 }																				// see 57_JavaScript Try Catch Throw.html
+		}
+	</script>
+</html>

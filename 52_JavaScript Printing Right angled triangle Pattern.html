@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Simple Right angled triangle Pattern Printing </title>
+</head>
+<body>
+
+</body>
+	<script type="text/javascript">
+		var rows = prompt("Enter number ", "");
+		printPattern(rows); // Here we are calling the function printPattern and passing user input values
+
+		// Declaring and defining function
+		function printPattern(rows) { // Formal parameters and actual parameters can be different i.e. printPattern(r) will also work
+
+			for (var i = 1; i <= rows; i++) {  // First loop is for number of rows counting, which user has input through prompt
+			
+				for (var j = 1; j <= i; j++) { // Second loop is for printing * according to current number of rows in the loop
+					
+						document.write("*");// this loop ensures when there is one row one star to print, when two rows 2 star to print, etc
+					}				
+						document.write("<br>");// After printing before j loop exits, we put break tag so that new iteration from next line
+				}
+			}
+	</script>
+</html>

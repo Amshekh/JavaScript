@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>	
+	<title> JavaScript Array Methods | shift | pop | reverse | push | slice </title>
+	<h1 id="result"></h1>
+	<button onclick="pop()"> POP </button>
+	<button onclick="push()"> PUSH </button>
+	<button onclick="slice()"> SLICE </button>
+	<button onclick="reverse()"> REVERSE </button>
+	<button onclick="shift()"> SHIFT </button>
+
+</head>
+<body></body>
+	<script type="text/javascript">
+		var laptops = ["Apple", "Dell", "Microsoft Surface", "Asus", "Lenovo"];
+		var demo = laptops;  // We have assigned laptops array values into demo, so we will perform methods like pop | shift | push etc
+	//  document.getElementById('result').innerText = demo;	 // In output we get array elements seperated by commas which doesn't look good
+		document.getElementById('result').innerText = demo.join("|"); // to check array elements of laptops is passed successfully to demo
+		
+	//  POP Operation on Array	
+		function pop() {
+			demo.pop();  // this will remove the last element of array demo
+	//  document.getElementById('result').innerText = demo;	 // In output we get array elements seperated by commas which doesn't look good
+		document.getElementById('result').innerText = demo.join("|");
+		}
+
+	//  PUSH Operation on Array
+		function push() {
+	//		demo.push("Acer"); // new element Acer will be added to the array
+	//		document.getElementById('result').innerText = demo.join("|");
+
+	// Alternatively you can take input from user to add a new element to the array
+			var x = prompt("Please enter a laptop brand", ""); // asking user to add a laptop brand
+			demo.push(x); 
+		document.getElementById('result').innerText = demo.join("|");
+		}
+
+    //  SLICE  Operation on Array
+    	
+    	function slice() {
+    		var x = demo.slice(2); // Here 2 elements from array will be sliced as we have passed 2
+    		document.getElementById('result').innerText = x;
+    	}
+
+    //  REVERSE Operation on Array
+
+    	function reverse() {
+    		demo.reverse();
+    		document.getElementById('result').innerText = demo.join("|");
+    	}
+
+    //  SHIFT Operation on Array
+
+    	function shift() {
+    		var x = demo.shift();
+    		document.getElementById('result').innerText = x; // It will show one element at a time and pass to next element
+    	}
+	</script>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> JavaScript Continue Statement </title>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+
+</body>
+	<script type="text/javascript">
+		for (var i = 0; i < 10; i++) {
+			if (i == 5) {
+				continue;   // As soon as i reaches to 5, if condition becomes true, so continue will skip current iternation to next i.e 6
+			}
+			document.write(i+ "</br>"); // Because 5 has been skiped by continue statement, we will have output 12346789 i.e. no 5 in output
+			}
+	</script>
+</html>

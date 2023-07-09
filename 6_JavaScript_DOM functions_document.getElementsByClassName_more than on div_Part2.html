@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> JavaScript DOM Functions </title>
+</head>
+<body>
+	<div class="main">
+			Welcome to Amit's Tech Center
+	</div>
+	<div class="main">
+		Hello Technocrats
+	</div>
+</body>
+		<script type="text/javascript">
+		//	var x = document.getElementsByClassName("main")[1].innerHTML;
+		//	alert(x);
+		document.getElementsByClassName("main")[1].innerHTML = "Welcome to Amit's Tech Center";
+		document.getElementsByClassName("main")[0].innerHTML = "Hello Technocrats";
+
+		// Here we clearly see that what is written in div is getting overridden by what we give in script tag using innerHTML
+		// reverse order of what we have given in div is in form of output
+
+		</script>
+</html>

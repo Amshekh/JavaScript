@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Arrow Function in ECMAScript 6 </title>
+</head>
+	<script type="text/javascript">
+		let name = prompt("Please enter your name");
+		let age = prompt("Please enter your age");
+		let gender = prompt("Please enter your gender");
+
+			  info = (name, age, gender) => { // We define function named Info which take three arguments
+				return "Hey " + name +"  " + age + "  " + gender; // we concate " " for space between name, age etc
+			}
+			document.write(info(name, age, gender));
+	</script>
+<body>
+
+</body>
+</html>

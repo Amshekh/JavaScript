@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> JavaScript forEach mathod</title>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+
+</body>
+	<script type="text/javascript">
+	//	var cars = ["BMW", "Ferrari", "Mercedez", "Bentley", "Volkswagen"];
+	//	cars.forEach(car);  // here we have made a function car by ourselves
+	//	function car(item) {
+	//		document.write(item+"</br>");
+	//	}
+
+		var cars = ["BMW", "Ferrari", "Mercedez", "Bentley", "Volkswagen"];
+		cars.forEach(car);
+		function car(item, index) {   // item is mandatory to give, whereas index and array are optional parameters.
+			document.write(index+ "==>", item+"</br>");  // index + "content" treated as string, so concatenation to make o/p looks good.
+		}												// document.write(index, item); would also give same output but not look good.
+	</script>
+</html>

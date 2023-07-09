@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> JavaScript clearTimeout Method </title>
+</head>
+	<script type="text/javascript">
+			var x; // x is a global variable that can be accessed by both start and stop functions defined below.
+			function start() {
+								x = setTimeout(
+												function () {
+													document.write("<h1>Welcome to Amit's Tech Center</h1>"); // written after 5 seconds
+												},
+
+								5000); // 5000 milliseconds = 5 seconds
+				
+			}
+
+			function stop() {
+				clearTimeout(x);  // x is a global variable
+				// when you click start button text appears after 5 seconds, when you press stop just after pressing start no text will come
+				alert('Timeout cleared'); // Timeout stopped/cleared
+			}	
+	</script>
+<body>
+	<button onclick="start()" style="width: 100px; background: aqua; margin: 150px 0px 0px 250px"> Start </button>
+	<button onclick="stop()" style="width: 100px; background: gold; margin: 150px 0px 0px 250px"> Stop </button>
+</body>
+</html>

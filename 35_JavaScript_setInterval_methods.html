@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> JavaScript setInterval method </title>
+	<button onclick="test()" style="width: 100px; background: aqua; margin: 150px 0px 0px 250px"> Press Now </button>
+</head>
+<body>
+
+</body>
+	<script type="text/javascript">
+	//	function test() {
+	//		alert("Hello");
+	//	}
+
+	// We want Hello to be print after 2500 milliseconds i.e. 2.5 seconds
+
+		function test() {
+			setInterval(
+						function () {
+							alert("Hello");
+						},
+						2500)   // After every 2500 milliseconds i.e 2.5 seconds, we will have alert box of Hello
+		}
+	</script>
+</html>

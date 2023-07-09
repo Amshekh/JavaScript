@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> JavaScript Prompt by function usage </title>
+</head>
+<body>
+	Name : <b id="result"></b>
+	</br>
+	</br>
+	<button onclick="call()" style="width: 100px; background: aqua;"> Call </button>
+</body>
+	<script type="text/javascript">
+		function call() {
+			var name = prompt("Please enter your name", "");
+			document.getElementById('result').innerHTML = name;
+		}
+	</script>
+</html>

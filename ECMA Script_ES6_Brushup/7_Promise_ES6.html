@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Promises in ECMAScript 6 </title>
+	<script type="text/javascript">
+		const myPromise = new Promise ( (resolve, reject) => {  // either a promise is resolve or reject
+			const a = 5, b = 7;
+			const c = a + b;
+			if (c == 9) {
+							resolve(`<h1>Yes! ${a} + ${b} = 9 </h1>`); // When promise becomes true
+			}
+			else {
+					reject(`<h1>No ${a} + ${b} != 9 </h1>`);  // When promise is failed
+			}
+		});
+
+			myPromise.then( (m) => {   // Understand the syntax  function.then( () => { }).catch( () => { })
+				// console.log(m);
+				document.write(m);
+			}).catch( (error) => {
+				// console.log(error)
+				document.write(error);
+			})
+	</script>
+</head>
+<body>
+
+</body>
+</html>

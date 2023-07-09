@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> JavaScript Math Object </title>
+	<script type="text/javascript">
+	function getOTP() {
+			var x = Math.random() * 10000;  // After multiplying with 10000 it will give us a four digit number from the random number
+			alert(x);
+			var OTP = Math.floor(x); //  Math.floor will extract the lower 4 digit number from variable x
+			document.write(OTP); // Random OTP will now be obtained as a output 
+
+		}
+	</script>
+</head>
+</head>
+<body>
+	<button onclick="getOTP()" style="width: 150px; background: aqua; margin: 150px 0px 0px 350px;"> OTP </button>
+</body>
+</html>
+
+<!-- For checking other functions of Math Object, goto console of your browse and test one by one | see screenshot  -->

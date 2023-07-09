@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> JavaScript_forEach_method_array </title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+
+</body>
+	<script type="text/javascript">
+		var cars = ["BMW", "Ferrari", "Mercedez", "Bentley", "Volkswagen"];
+
+		cars.forEach(car);
+		function car(item, index, array) {   // item is mandatory to give, whereas index and array are optional parameters.
+		
+		//	document.write(index+ "==>", item+"</br>"); // index + "content" treated as string, so concatenation to make o/p looks good.
+
+		array[index] = item+" 0";  // This will add 0 after each car in the output, as 0 is concatenated
+		}					
+
+		cars.forEach(after);
+		function after(item, index){
+					document.write(index+ "==>", item+"</br>"); 
+		}									
+	
+	</script>
+</html>

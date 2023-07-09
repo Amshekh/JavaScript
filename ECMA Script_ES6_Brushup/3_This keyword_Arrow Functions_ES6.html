@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> This keyword in Arrow Function in ECMAScript 6 </title>
+</head>
+	<script type="text/javascript">
+		const person = {
+						test() {
+								setTimeout(( ) => {
+									console.log(this); //In ES6 this will refer to as object of test not setTimeout
+									}, 5000); // In earlier JavaScript this would refer as object of setTimeout
+								
+								},
+						};
+						person.test(); // Check console of browser, output will be ---->  Object { test: test()
+	</script>							
+<body>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> JavaScript Comparison Operators </title>
+</head>
+<body>
+		<h1 id="result" style="margin: 50px auto; width: 500px;"></h1>
+</body>
+		<script type="text/javascript">
+			var x = 7;
+			var y = 5;
+		//	var z = x == y;  // Is x = y i.e.  7 = 5 obviously not, so output will be False.
+		//	document.getElementById("result").innerHTML = z;
+
+		//	var z = x != y;  // Is 7 not equal to 5, ofcourse yes, so output will be True.
+		//	document.getElementById("result").innerHTML = z;//
+
+		//	var z = x > y;  // Is 7 > 5, ofcourse yes, so output will be True;
+		//	document.getElementById("result").innerHTML = z;
+
+		//	var z = x < y;  // Is 7 < 5, ofcourse no, so output will be False;
+		//	document.getElementById("result").innerHTML = z;
+
+		//	var z = x >= y; // Is 7 >= 5, ofcourse yes, so output will be True;
+		//	document.getElementById("result").innerHTML = z;
+
+		//	var z = x <= y; // Is 7 <= 5, ofcourse no, so output will be False;
+		//	document.getElementById("result").innerHTML = z;
+
+		var z = x > y ? "Yes" : "No";  // Ternary operator ==> If x > y then give output as Yes  ==>  7 > 5 correct, so output is Yes
+		document.getElementById("result").innerHTML = z;
+
+		</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> JavaScript_getElementsByName_getElementsByTagName </title>
+</head>
+<body>
+	<input type="" name="user_name" style="margin: 100px 0px 0px 300px;" />
+	<button onclick="getName()" style="width: 150px; background: aqua; margin: 100px 0px 0px 50px;"> Submit </button>
+	<h1></h1>
+</body>
+	<script type="text/javascript">
+		function getName() {
+		
+		//	var User_Name = document.getElementsByName('user_name')[0]; // Oth key will ensure the first input user name
+		//	console.log(User_Name); // debugging purpose we see under inspect section of browser console ==> no error
+		//   document.getElementsByTagName('h1')[0].innerHTML = User_Name.value; // here we use .value get the value from h1 tag
+
+		//  Alternatively
+		//	var User_Name = document.getElementsByName('user_name')[0].value; // Oth key will ensure the first input user name
+		//	document.getElementsByTagName('h1')[0].innerHTML = User_Name;
+
+
+		//  Alternatively 
+			var User_Name = document.getElementsByName('user_name')[0].value; // Oth key will ensure the first input user name
+
+		//  If we want as soon as user input name and press submit button, the input box to become empty now
+			document.getElementsByName('user_name')[0].value = "";	//
+			document.getElementsByTagName('h1')[0].innerHTML = User_Name;	
+		}
+	</script>
+</html>

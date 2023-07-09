@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> JavaScript Mobile Number Validation </title>
+</head>
+<body>
+	Pleasr enter your mobile number
+	</br>
+	</br>
+	<input type="text" name="" onkeyup="validate(this)"> <!-- this will take reference of input box to validate function declared in script															  tag below -->
+	<div id="result"></div>
+</body>
+	<script type="text/javascript">
+
+	//  When user enters alphabets or alphanumeric combinations, we want instructions to be given for input in red color
+		document.getElementById('result').style.color = "red"; // Here we are using Javascript instead of CSS for color
+
+			function validate(xyz) {  // this will pass whatever we input to xyz argument of function validate
+	//			document.getElementById('result').innerText = xyz.value;  // The input could be a text as well as a number
+
+	//  We only want user to input numeric value, so we will use isNaN ==> is Not a Number
+				if (isNaN(xyz.value)) {
+					document.getElementById('result').innerText = "Please enter numbers only";  // when if condition is true, i.e. user enters alphabetical 
+				}
+				else {
+					document.getElementById('result').innerText = " ";	// We will left blank, as user is now entering number
+					if (xyz.value.length > 10) {
+						document.getElementById('result').innerText = "Please enter a 10 digit number only";
+					}
+					else {
+						document.getElementById('result').innetText = " ";
+					}
+				}
+			}
+	</script>
+</html>

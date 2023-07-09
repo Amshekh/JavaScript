@@ -1,0 +1,18 @@
+
+ * Goto google and search for VS code and install it. [It's free code editor from MicroSoft]
+	
+ * Ofcourse, you can do it Sublime Text also. [ See screenshots! Done in Sublime Text]
+
+ * Now similarly download and install Xampp. [ It's also free to download from Apache friends]
+
+ * Search in installed Xampp folder for htdocs and in this create a new folder where you want to keep all coding files.
+
+ * In this new created folder make a php file index.php, 2 javascript files utility.js and main.js
+
+ * Here we are exporting a function from utility.js to main.js (function to add two numbers from utility.js to main.js)
+
+ * Make sure to start Xampp server and start Apache and MySql
+
+ * Now on web browser type localhost/folder name which you created
+
+ * Right click on browser and goto console and you will see output

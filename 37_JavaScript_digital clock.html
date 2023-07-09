@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> JavaScript Digital Clock </title>
+	<style type="text/css">
+		h1 {
+			font-size: 100px;
+			text-align: center;
+			font-family: Times New Roman;
+			color: aqua;
+		}
+	</style>
+</head>
+<body onload="displayTime()">  <!-- As soon as the web page loads clock starts working without need of any button -->
+	<h1></h1>
+</body>
+	<script type="text/javascript">
+		function displayTime() {
+			var d = new Date();
+			var h = d.getHours();
+			var m = d.getMinutes();
+			var s = d.getSeconds();
+			var session = "AM";
+
+			if (h == 0) {
+				h = 12;
+			}
+			if (h >= 12) {
+				h = h - 12;  // When hours reaches above 12 i.e. 13 then h = 13 - 12 = 1 PM
+				session = "PM";
+			}
+
+			h = h < 10 ? "0"+h : h;
+			m = m < 10 ? "0"+m : m;
+			s = s < 10 ? "0"+s : s;
+
+			var time = h + ":"	+ m + ":" + s + " " + session;
+			document.getElementsByTagName('h1')[0].innerText = time;
+			setTimeout(displayTime, 1000);
+		}
+	</script>
+</html>
